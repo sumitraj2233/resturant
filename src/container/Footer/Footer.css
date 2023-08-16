@@ -44,7 +44,7 @@ width: 100%;
 .app__footer-logo{
     display: flex;
     position: absolute;
-   top:50%;
+   top:60%;
    width:88%;
    gap:4rem;
    flex-wrap: wrap;
