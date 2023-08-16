@@ -1,56 +1,56 @@
 import React from "react";
+
+import "./Footer.css";
+import SubHeading from "../../components/SubHeading/SubHeading";
+import { images } from "../../constants";
 import { FiFacebook, FiTwitter, FiInstagram } from "react-icons/fi";
 
-import { FooterOverlay, Newsletter } from "../../components";
-import { images } from "../../constants";
-import "./Footer.css";
-
 const Footer = () => (
-  <div className="app__footer section__padding" id="login">
-    <FooterOverlay />
-    <Newsletter />
-
-    <div className="app__footer-links">
-      <div className="app__footer-links_contact">
-        <h1 className="app__footer-headtext">Contact Us</h1>
-        <p className="p__opensans">
-          Pulpar, BiharSharif, Near Canara Bank, Bihar, Nalanda
+  <div className="app__footer app__wrapper">
+    <div className="app__footer-bg"></div>
+    <div className="app__bg app__footer-lg section__padding">
+      <div className="app_footer-subscribe">
+        <SubHeading title="Newsletter" />
+        <h1 className="headtext__cormorant">Subscribe to Our Newsletter</h1>
+        <p className="p__cormorant" style={{ margin: "2rem 0" }}>
+          And never miss latest Updates!
         </p>
-        <p className="p__opensans">+91 9910475193</p>
-        <p className="p__opensans">+91 7903307290</p>
-      </div>
-
-      <div className="app__footer-links_logo">
-        {/* <img src={images.gericht} alt="footer_logo" /> */}
-        <h1 className="headtext__cormorant">Golden Iris</h1>
-        <p className="p__opensans">
-          &quot;The best way to find yourself is to lose yourself in the service
-          of others.&quot;
-        </p>
-        <img
-          src={images.spoon}
-          className="spoon__img"
-          style={{ marginTop: 15 }}
-          alt="spoon"
-        />
-        <div className="app__footer-links_icons">
-          <FiFacebook />
-          <FiTwitter />
-          <FiInstagram />
+        <div className="app__footer-input">
+          <input type="text" placeholder="Email Address" />
+          <button type="button" className="custom__button">
+            Subscribe
+          </button>
         </div>
       </div>
-
-      <div className="app__footer-links_work">
-        <h1 className="app__footer-headtext">Working Hours</h1>
-        <p className="p__opensans">Monday-Friday:</p>
-        <p className="p__opensans">08:00 am - 12:00 am</p>
-        <p className="p__opensans">Saturday-Sunday:</p>
-        <p className="p__opensans">07:00 am - 11:00 pm</p>
+      <div className="app__footer-logo">
+        <div className="app__footer-logo-contact">
+          <h4 className="p__cormorant">Contact Us</h4>
+          <p className="p__cormorant">
+            Pulpar, BiharSharif, Near Canara Bank, Bihar, Nalanda
+          </p>
+          <p className="p__cormorant">+ 91 9910475193 +91 9693511870 </p>
+        </div>
+        <div className="app__footer-logo-mid">
+          <h1 className="headtext__cormorant">Golden Iris</h1>
+          <p className="p__cormorant">
+            "The best way to find yourself is to lose yourself in the service of
+            others.”
+          </p>
+          <img src={images.spoon} alt="spoon" />
+          {/* <img src={images.} alt="" /> */}
+          <div className="app__footer-links_icons">
+            <FiFacebook />
+            <FiTwitter />
+            <FiInstagram />
+          </div>
+          <p className="p__cormorant">2023 SUMIT All Rights reserved.</p>
+        </div>
+        <div className="app__footer-logo-work">
+          <h4 className="p__cormorant">Working Hours</h4>
+          <p className="p__cormorant">Monday-Friday: 08:00 am -12:00 am</p>
+          <p className="p__cormorant">Saturday-Sunday: 07:00am -11:00 pm</p>
+        </div>
       </div>
-    </div>
-
-    <div className="footer__copyright">
-      <p className="p__opensans">2023 SUMIT. All Rights reserved.</p>
     </div>
   </div>
 );
