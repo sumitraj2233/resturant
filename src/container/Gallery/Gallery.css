@@ -1,0 +1,111 @@
+.app__gallery{
+    background: var(--color-black);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem 0 3rem 6rem;
+    flex-direction:row;
+}
+.app__gallery-images{
+    position: relative;
+}
+
+.app__gallery-content{
+    flex:0.4;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+}
+.app__gallery-content h1{
+    margin-bottom:1rem;
+}
+.app__gallery-content button{
+    margin-top:1rem;
+}
+.app__gallery-images{
+    flex:1;
+    position: relative;
+    display: flex;
+    align-items: flex-end;
+    flex-direction: row;
+    max-width: 57%;
+    justify-content: flex-end;
+}
+.app__gallery-images-container{
+    display: flex;
+    flex-direction: row;
+    width: max-content;
+    overflow-x: scroll;
+    white-space: nowrap;
+    -ms-overflow-style: none;
+    scrollbar-width: none; 
+}
+.app__gallery-images-container::-webkit-scrollbar {
+    display: none;
+}
+.app__gallery-images-image{
+    position: relative;
+    min-width:300px;
+    height:447px;
+    margin-right:2rem;
+    /* width:100%; */
+}
+.app__gallery-images-image img{
+    width:200px;
+    height:300px;
+    object-fit: cover;
+}
+.app__gallery-images_arrows{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: absolute;
+    width: 100%;
+    padding: 0 1rem;
+    bottom: 5%;
+}
+
+.gallery__arrow-icon{
+    background: var(--color-black);
+    color:var(--color-white);
+    cursor: pointer;
+    border-radius: 5px;
+}
+.gallery__arrow-icon:hover{
+    color:var(--color-white);
+}
+.gallery__image-icon{
+    position: absolute;
+    color:#fff;
+    font-size: 2rem;
+    opacity:0.5;
+    cursor:pointer;
+    transition:0.5s ease;
+    bottom: 50%;
+    left: 49%;
+}
+.app__gallery-images-image img{
+    width:100%;
+    height:100%;
+    object-fit: cover;
+    opacity:1;
+    margin-right:2rem;
+    transition: 0.5s ease;
+}
+.app__gallery-images-image:hover img{
+    opacity:0.35;
+}
+.gallery__image-icon:hover img{
+    opacity:1;
+}
+
+@media screen and (max-width:900px) {
+    .app__gallery{
+        flex-direction: column;
+    }
+    .app__gallery-images{
+        max-width: 100%;
+        margin-top:2rem;
+    }
+}
