@@ -48,7 +48,7 @@ width: 100%;
    top:50%;
    width:88%;
    gap:4rem;
-   flex-wrap: wrap;
+   /* flex-wrap: wrap; */
 }
 .app__footer-logo-contact,.app__footer-logo-mid,.app__footer-logo-work{
     flex:1;
@@ -73,6 +73,11 @@ width: 100%;
 .app__footer-links_icons svg:hover {
     color: var(--color-golden);
 }
+@media screen and (max-width:400px){
+    .app__footer-logo{
+        flex-direction: column;
+       }
+}
 @media screen and (max-width:900px){
     .app__footer-input{
         flex-direction: column;
@@ -90,6 +95,7 @@ width: 100%;
         display: none;
        }
        .app__footer-logo{
+        /* flex-direction: column; */
         margin-top: 10%;
        }
 }
